@@ -110,7 +110,7 @@ const logout = () => {
 
 <style scoped>
 .header {
-  background-image: linear-gradient(to right, #00547d, #007fa4, #00aaa0, #00d072, #a8eb12);
+  background-image: linear-gradient(to right, #667eea, #764ba2, #f093fb, #f5576c);
 }
 
 .title {
