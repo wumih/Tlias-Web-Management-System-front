@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue-tlias-management
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -33,3 +34,7 @@ npm run build
 ```sh
 npm run lint
 ```
+=======
+# Tlias-Web-Management-System-front
+ Tlias智能学习辅助系统的前端
+>>>>>>> c0c860a63b68b3f06748bdeffb97ca1d9dce6400
