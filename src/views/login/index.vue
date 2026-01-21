@@ -4,7 +4,7 @@ import { loginApi } from '@/api/login'
 import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
 
-let loginForm = ref({username:'admin', password:'123456'})
+let loginForm = ref({username:'wuyong', password:'123456'})
 let router = useRouter()
 
 //登录
@@ -37,7 +37,7 @@ const cancel = () => {
         <el-form-item label="用户名" prop="username">
           <el-input v-model="loginForm.username" placeholder="请输入用户名"></el-input>
         </el-form-item>
-        
+
         <el-form-item label="密码" prop="password">
           <el-input type="password" v-model="loginForm.password" placeholder="请输入密码"></el-input>
         </el-form-item>
@@ -48,9 +48,10 @@ const cancel = () => {
         </el-form-item>
 
         <!-- 测试账号提示卡片 -->
-        <div style="margin-top: 20px; font-size: 12px; color: #606266; line-height: 1.5; background-color: #f4f4f5; padding: 10px; border-radius: 4px;">
+        <div
+          style="margin-top: 20px; font-size: 12px; color: #606266; line-height: 1.5; background-color: #f4f4f5; padding: 10px; border-radius: 4px;">
           <p><strong>👨‍💻 面试官您好！</strong></p>
-          <p>🔑 测试账号：<span style="color: #409EFF; font-weight: bold;">admin</span></p>
+          <p>🔑 测试账号：<span style="color: #409EFF; font-weight: bold;">wuyong</span></p>
           <p>🔒 测试密码：<span style="color: #409EFF; font-weight: bold;">123456</span></p>
           <p style="margin-top: 5px; color: #E6A23C;">
             <i class="el-icon-warning-outline"></i>
