@@ -4,7 +4,7 @@ import { loginApi } from '@/api/login'
 import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
 
-let loginForm = ref({username:'', password:''})
+let loginForm = ref({username:'admin', password:'123456'})
 let router = useRouter()
 
 //登录
@@ -46,6 +46,17 @@ const cancel = () => {
           <el-button class="button" type="primary" @click="login">登 录</el-button>
           <el-button class="button" type="info" @click="cancel">重 置</el-button>
         </el-form-item>
+
+        <!-- 测试账号提示卡片 -->
+        <div style="margin-top: 20px; font-size: 12px; color: #606266; line-height: 1.5; background-color: #f4f4f5; padding: 10px; border-radius: 4px;">
+          <p><strong>👨‍💻 面试官您好！</strong></p>
+          <p>🔑 测试账号：<span style="color: #409EFF; font-weight: bold;">admin</span></p>
+          <p>🔒 测试密码：<span style="color: #409EFF; font-weight: bold;">123456</span></p>
+          <p style="margin-top: 5px; color: #E6A23C;">
+            <i class="el-icon-warning-outline"></i>
+            温馨提示：因使用免费云服务，首次登录可能需要等待约 50 秒唤醒服务器，请耐心等待，感谢您的理解！
+          </p>
+        </div>
       </el-form>
     </div>
   </div>
