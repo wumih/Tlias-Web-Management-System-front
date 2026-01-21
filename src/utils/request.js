@@ -4,7 +4,7 @@ import router from '../router'
 
 //创建axios实例对象
 const request = axios.create({
-  baseURL: 'https://tlias-web-management-system.onrender.com/api',
+  baseURL: 'https://tlias-web-management-system.onrender.com',
   timeout: 600000
 })
 
