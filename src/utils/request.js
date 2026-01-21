@@ -27,8 +27,12 @@ request.interceptors.response.use(
   },
   (error) => { //失败回调
     //如果响应的状态码为401, 则路由到登录页面
-    if (error.response.status === 401) {
+    if (error.response && error.response.status === 401) {
       ElMessage.error('登录失效, 请重新登录')
+      
+      // 清除本地存储的过期用户信息
+      localStorage.removeItem('loginUser')
+      
       router.push('/login')
     }
     return Promise.reject(error)

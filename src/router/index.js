@@ -33,4 +33,25 @@ const router = createRouter({
   routes,
 });
 
+// 路由守卫 - 登录验证
+router.beforeEach((to, from, next) => {
+  // 获取本地存储的登录信息
+  const loginUser = localStorage.getItem('loginUser');
+  
+  // 如果要访问登录页，直接放行
+  if (to.path === '/login') {
+    next();
+    return;
+  }
+  
+  // 如果未登录，重定向到登录页
+  if (!loginUser) {
+    next('/login');
+    return;
+  }
+  
+  // 已登录，正常访问
+  next();
+});
+
 export default router;
