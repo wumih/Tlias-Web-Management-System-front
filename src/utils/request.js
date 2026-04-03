@@ -4,7 +4,7 @@ import router from '../router'
 
 //创建axios实例对象
 const request = axios.create({
-  baseURL: 'https://tlias-web-management-system.onrender.com',
+  baseURL: '/api',
   timeout: 600000
 })
 
@@ -12,7 +12,6 @@ const request = axios.create({
 request.interceptors.request.use(
   (config) => {
     let loginUser = JSON.parse(localStorage.getItem('loginUser'))
-    console.log(localStorage.getItem('loginUser'))
     if (loginUser) {
       config.headers.token = loginUser.token
     }
@@ -29,10 +28,10 @@ request.interceptors.response.use(
     //如果响应的状态码为401, 则路由到登录页面
     if (error.response && error.response.status === 401) {
       ElMessage.error('登录失效, 请重新登录')
-      
+
       // 清除本地存储的过期用户信息
       localStorage.removeItem('loginUser')
-      
+
       router.push('/login')
     }
     return Promise.reject(error)
