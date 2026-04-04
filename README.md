@@ -20,6 +20,10 @@
 - 🔐 **鉴权体系**：基于 JWT 的无状态 Token 认证，配合前端路由守卫完整覆盖登录鉴权链路
 - ☁️ **云原生就绪**：后端采用环境变量驱动配置，支持一键部署到 Railway / Render 等 PaaS 平台
 
+  🔗 **相关项目**：
+- [前端项目仓库](https://github.com/wumih/EduHub-Admin-front.git)
+- [后端项目仓库](https://github.com/wumih/EduHub-Admin.git)
+
 ---
 
 ## 🛠️ 核心技术栈
